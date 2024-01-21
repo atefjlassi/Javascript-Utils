@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        window.onload = function () {
+            function onchangeInput() {
+                var the_input = document.getElementById('the_input');
+                the_input.onchange = function (e) {
+                    console.log("###### Input Event #######");
+                    console.dir(e);
+                    console.dir(e.target.value);
+                }
+            };
+
+            function onclickButton() {
+                var the_button = document.getElementById('the_button');
+                the_button.onclick = function (e) {
+                    console.log("###### Button Event #######");
+                    console.dir(e);
+                }
+            }
+
+            onclickButton();
+            onchangeInput();
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="text" id="the_input">
+    <input type="button" id="the_button" value="clic">
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var innerHight = window.innerHeight;
+        var innerWidth = window.innerWidth;
+
+        console.log(innerWidth + " " + innerHight);
+        console.log(window.location.href)
+        // console.log(window.alert("BE CAREFULL"));
+        console.log("################")
+
+        // window.document.forms('le_form').le_champ_text.value = "Nouvelle valeur";
+        // console.log(forms);
+
+
+    </script>
+</head>
+<body>
+
+        <form name="le_form" action="">
+            <input type="text" name="txt_nom" value="ATEF JLASSI">
+            <input type="checkbox" name="chk_yes">
+        </form>
+
+        <script type="text/javascript">
+
+           var form = document.forms['le_form'];
+           var txtNom = form.txt_nom;
+           var chkYes = form.chk_yes;
+
+           console.log(txtNom.value);
+           console.log(chkYes.checked);
+           console.dir(chkYes);
+
+        </script>
+</body>
+</html>

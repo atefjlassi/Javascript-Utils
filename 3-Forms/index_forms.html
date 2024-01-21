@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        /**
+         * les formulaires sont des objets qui ont : 1- des propriétés => action, method...
+         *                                           2- des méthodes => submit(), reset()...
+         *
+         *
+         */
+        window.onload = function () {
+
+            // IF LE TYPE DE BUTTON EST button
+            var btn_submit = document.getElementById('btn_submit');
+            btn_submit.onclick = function () {
+
+                console.dir(document.forms[0].elements[1].value); // afficher les éléments a travers l'indice de tableau: 1èr forme deuxième input
+
+                console.log("#######");
+                var nom = document.forms['le_form'].elements.nom.value; // extraction values
+                console.log(nom);
+
+                var prenom = document.forms['le_form'].elements.prenom.value;
+                console.log(prenom);
+
+                var email = document.forms['le_form'].elements.email.value;
+                console.log(email);
+                // console.log(document.forms.le_form);
+            }
+
+            //IF LE TYPE DE BUTTON EST submit
+            document.forms.le_form.onsubmit = function () {
+                if (document.forms.le_form.elements.nom.value != "") {
+                    result=true;
+                }
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <form name="le_form" action="">
+        <input type="text" name="nom" placeholder="nom"> <br>
+        <input type="text" name="prenom" placeholder="prenom"> <br>
+        <input type="text" name="email" placeholder="email"> <br>
+        <input type="button" value="Enovoyer" id="btn_submit">
+        
+    </form>
+
+</body>
+</html>

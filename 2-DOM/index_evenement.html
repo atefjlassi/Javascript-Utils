@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+
+    function doChange(e) {
+            console.dir(e.target.value);
+            console.log("onChange")
+    }
+
+    function doClickDiv(e) {
+        console.log('div click');
+        console.dir(e);
+    }
+
+    function doClick(e) {
+        console.log('button click');
+        console.dir(e);
+    }
+    </script>
+</head>
+<body>
+
+    <input type="text" name="ddd" onchange="doChange(event)">
+
+    <div onclick="doClickDiv(event)">
+        <input type="button" value="click" onclick="doClick(event)">
+    </div>
+</body>
+</html>

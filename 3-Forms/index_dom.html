@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        window.onload = function () {
+            var p1 = document.getElementById("p1");
+            console.log(p1.innerHTML) // afficher le contenue de p1
+            p1.style.backgroundColor = 'yellow';
+            p1.style.color = 'red';
+
+            var arr = document.getElementsByTagName('p');
+            console.log(arr);
+
+            var arr_class = document.getElementsByClassName('la_class');
+            console.log(arr_class)
+        }
+    </script>
+</head>
+<body>
+
+   <p id="p1"> P1) lorem ipsum 1</p>
+   <p id="p2" class="la_class"> P2) lorem ipsum 2</p>
+   <p id="p3" class="la_class"> P3) lorem ipsum 3</p>
+
+
+</body>
+</html>

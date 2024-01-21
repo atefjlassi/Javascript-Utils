@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // En JS les declarations de variables sont traitees avant tout
+        // Hoisting: traduction = remonté
+        /**
+         * a = 2;
+         * var a;
+         *
+         * est strictement équivalant à
+         *
+         * var a;
+         * a = 2;
+         */
+        "use strict";
+        a = 2;
+        console.log(a);
+        var a;
+
+        /**
+         *  NaN s'affiche: car la déclaration est remonté MAIS l'initialisation reste ou se trouve
+         */
+        var b = 2;
+        console.log(b+c);
+        var c = 3;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

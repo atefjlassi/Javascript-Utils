@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        <!-- PROTOTYPE -->
+        /**
+         * les fonctions sont des objets
+         *
+         * Elles ont des propriétés
+         *
+         * Une de ces propriétés: prototype
+         *
+         * Il est possible d'ajouter des propriétés et des méthodes à partir du prototype
+         *
+         * EN JS LES OBJETS SONT PASSE par REFERENCE == IL YA UN PROTOYPE POUR TOUS LES OBJET DU MEME CONSTRUCTEUR.
+         */
+        var Person = function (p_nom, p_prenom) {
+            this.nom = p_nom;
+            this.prenom = p_prenom;
+        }
+
+        var personne = new Person("Atef", "Jlassi");
+        console.log(personne);
+
+        Person.prototype.age = 30;
+        Person.prototype.getAge = function () {
+            return this.age;
+        }
+
+        var ali = new Person("Ali", "Ben Amor");
+        var atef = new Person("Atef", "Jlassi");
+
+
+        console.log(atef.getAge());
+        console.log(ali.getAge());
+        console.log(atef.constructor.prototype.age);
+
+        atef.adresse = "El Mornaguia";
+        console.log(atef);
+
+        console.log("############ Tables ###############");
+
+        // creation d'une fonction showAll dans prototype
+        Array.prototype.showAll = function () {
+            for (var i = 0; i <=this.length-1; i++) {
+                console.log(this[i]);
+            }
+        }
+
+        var arr = ["un", "deux", "trois"];
+
+        arr.showAll();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /**
+         * LE PATTERN MODULE:
+         *
+         * Conçu a l'origine pour permettre l'encapsulation (private / public)
+         *
+         * En JS ce pattern est utilisé pour simuler le comportement d'une classe.
+         */
+
+        var monModule = (function () {
+            var compteur = 0 ;
+
+            return {
+                incrementCompteur: function () {
+                    return ++compteur;
+                }
+            }
+        })();
+
+        var incrementCompteur = monModule.incrementCompteur();
+        incrementCompteur = monModule.incrementCompteur();
+        console.log(incrementCompteur);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

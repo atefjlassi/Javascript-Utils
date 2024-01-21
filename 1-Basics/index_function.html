@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // les fonction en javascript se comportent comme des variables
+        "use strict";
+        var c;
+        var somme = function (a,b) {  //OR function somme(a,b) {
+            // tester le variable special: arguments
+            console.log(arguments);
+            c="";
+            if (!isNaN(a) && !isNaN(b)) {
+                c = a+b;
+            }
+            return c;
+        }
+
+        var result = somme(2,3, "un", "deux");
+        // var result = somme("un", "deux");
+        console.log(result);
+        // si la declaration de c (var c ) est fait dans la fonction c va etre not defined
+        // sinon si var et emis, c sera affiché
+         console.log(c);
+         console.log(typeof somme);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
